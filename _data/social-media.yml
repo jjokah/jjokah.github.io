@@ -6,11 +6,6 @@ behance:
   icon  : fab fa-behance
   color : 1769ff
 
-dev:
-  url   : https://www.dev.to/
-  icon  : fab fa-dev
-  color : 000000
-
 dribbble:
   url   : https://dribbble.com/
   icon  : fab fa-dribbble
@@ -100,3 +95,8 @@ keybase:
   url   : https://www.keybase.io/
   icon  : fab fa-keybase
   color : 66ccff
+
+dev:
+  url   : https://www.dev.to/
+  icon  : fab fa-dev
+  color : 000000
