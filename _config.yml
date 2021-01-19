@@ -5,7 +5,7 @@ description         : >-
                       use tabs over spaces
                       and never broke production.
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
-# repository          : YoussefRaafatNasry/portfolYOU     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+repository          : jjokah/jjokah.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
 
 
@@ -40,7 +40,7 @@ author:
   stackoverflow     : 7292035
 # tumblr            : your_username.tumblr.com
 # twitch            : your_username
-  twitter           : _jjokah
+  twitter           : jjokah_
 # vimeo             : your_username
 # youtube           : your_channel_name
 # keybase           : your_username
@@ -80,7 +80,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      comments: false                                   # Set to true to enable disqus comments
+      comments: true                                   # Set to true to enable disqus comments
 
 ### Exclude from processing ###
 exclude:
