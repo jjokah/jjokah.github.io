@@ -3,7 +3,7 @@ title               : jjokah
 description         : >-
                        i code👨‍💻 i read📖 i sleep🛌 i repeat🔁
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
-repository          : jjokah/jjokah.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+repository          : jjokah/portfolYOU     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : jjokah/portfolYOU
 
 
