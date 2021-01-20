@@ -1,12 +1,12 @@
 ---
-title: [won] The 16hours battle to installed pychess
+title: WON The 16hours battle to installed pychess
 tags: [Python, Chess, Linux]
 style: fill
 color: success
 description: The chanllenge jjokah went through while trying to install chess game on linux.
 ---
 
-Source: [jjokah on dev.to](https://dev.to/jjokah/won-the-16hours-battle-to-installed-pychess-3j5o)
+Source: [jjokah](https://dev.to/jjokah/won-the-16hours-battle-to-installed-pychess-3j5o)
 
 
 After coding for the day at 17:00, I needed to take a break. Then decided to play chess on my PC. This is how the 1st hour began.
