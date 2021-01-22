@@ -4,8 +4,36 @@
 
 - name: HTML5/CSS3
   percentage: 80
-  color:
+  color: secondary
 
 - name: Javascript
   percentage: 50
   color: dark
+
+- name: TailwindCSS
+  percentage: 70
+  color:
+
+- name: Algorithm
+  percentage: 30
+  color: info
+
+- name: System Admin | Linux
+  percentage: 50
+  color: light
+
+- name: AWS, Heroku
+  percentage: 40
+  color: warning
+
+- name: OOP
+  percentage: 80
+  color: success
+
+- name: Postgres SQL
+  percentage: 60
+  color: dark
+
+- name: Networking
+  percentage: 30
+  color: danger
