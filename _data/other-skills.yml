@@ -5,3 +5,15 @@
 - name: Creative Writing
   percentage: 85
   color: success
+
+- name: Chess
+  percentage: 60
+  color: light
+
+- name: Communication
+  percentage: 70
+  color: dark
+
+- name: Work Ethic
+  percentage: 90
+  color: danger
