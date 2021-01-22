@@ -15,12 +15,12 @@
   color:
 
 - name: Algorithm
-  percentage: 30
+  percentage: 70
   color: info
 
-- name: System Admin | Linux
+- name: System Admin
   percentage: 50
-  color: light
+  color: secondary
 
 - name: AWS, Heroku
   percentage: 40
@@ -35,5 +35,5 @@
   color: dark
 
 - name: Networking
-  percentage: 30
-  color: danger
+  percentage: 40
+  color: secondary

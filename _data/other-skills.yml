@@ -8,7 +8,7 @@
 
 - name: Chess
   percentage: 60
-  color: light
+  color: 
 
 - name: Communication
   percentage: 70
