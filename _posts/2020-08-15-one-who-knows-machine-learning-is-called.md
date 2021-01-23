@@ -1,6 +1,6 @@
 ---
 title: One who knows Machine Learning is called ...
-tags: [ machinelearning, datascience, developer ]
+tags: [machinelearning, datascience, developer]
 style: border
 color: danger
 description: 
