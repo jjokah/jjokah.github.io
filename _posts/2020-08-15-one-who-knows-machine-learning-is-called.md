@@ -1,13 +1,12 @@
 ---
 title: One who knows Machine Learning is called ...
 tags: [machinelearning, datascience, developer]
-style: border
-color: danger
+style: fill
+color: warning
 description: The short answer -> _**A Machine Learning Engineer. Then, a brief explanation...
 ---
 
 Source: [jjokah](https://dev.to/jjokah/one-who-knows-machine-learning-is-called-3ko8)
-![](https://dev-to-uploads.s3.amazonaws.com/i/7gp8n56o5nt420i5p38q.png)
 
 The short answer: _**A Machine Learning Engineer**_
 
