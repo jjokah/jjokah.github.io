@@ -2,12 +2,16 @@
   percentage: 90
   color: danger
 
+- name: Django
+  percentage: 85
+  color: warning
+
 - name: HTML5/CSS3
   percentage: 80
   color: secondary
 
 - name: Javascript
-  percentage: 50
+  percentage: 60
   color: dark
 
 - name: TailwindCSS
@@ -19,11 +23,11 @@
   color: info
 
 - name: System Admin
-  percentage: 50
+  percentage: 60
   color: secondary
 
-- name: AWS, Heroku
-  percentage: 40
+- name: Cloud comp.
+  percentage: 50
   color: warning
 
 - name: OOP
@@ -35,5 +39,5 @@
   color: dark
 
 - name: Networking
-  percentage: 40
+  percentage: 50
   color: secondary
