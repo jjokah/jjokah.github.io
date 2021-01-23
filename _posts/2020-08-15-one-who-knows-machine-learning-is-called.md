@@ -7,7 +7,7 @@ description:
 ---
 
 Source: [jjokah](https://dev.to/jjokah/one-who-knows-machine-learning-is-called-3ko8)
-![Alt Text](https://res.cloudinary.com/practicaldev/image/fetch/s--rWJeyhoQ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/7gp8n56o5nt420i5p38q.png)
+![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/7gp8n56o5nt420i5p38q.png)
 
 The short answer: _**A Machine Learning Engineer**_
 
