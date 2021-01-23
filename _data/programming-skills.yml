@@ -7,11 +7,11 @@
   color: warning
 
 - name: HTML5/CSS3
-  percentage: 80
+  percentage: 85
   color: secondary
 
 - name: Javascript
-  percentage: 60
+  percentage: 65
   color: dark
 
 - name: TailwindCSS
@@ -27,7 +27,7 @@
   color: secondary
 
 - name: Cloud comp.
-  percentage: 50
+  percentage: 60
   color: warning
 
 - name: OOP
