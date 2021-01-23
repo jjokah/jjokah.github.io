@@ -5,7 +5,7 @@ permalink: /activites/
 weight: 3
 ---
 
-# jjokah in motion
+# **JJOKAH** in motion 🏃‍♂️    💨
 
 <div class="row">
 {% include activities/timeline.html %}
