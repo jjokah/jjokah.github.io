@@ -1,7 +1,7 @@
 ---
 title: Live by the Rules, but don't Die by the Rules
 tags: [programming, python, bestpractice]
-style: border
+style: fill
 color: success
 description: As developers, I believe we all have to set our priorities right.
 ---

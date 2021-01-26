@@ -1,8 +1,8 @@
 ---
 title: Separating Sensitive Data from Code (using python-decouple)
 tags: [python, django, security, bestpractice]
-style: border
-color: warning
+style: fill
+color: danger
 description: Here is how you seperate your sensitive data (like secret key) from your code base.
 ---
 
