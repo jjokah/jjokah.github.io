@@ -1,8 +1,8 @@
 ---
 title: SUBMODULES - A git repo inside a git repo
 tags: [git, github]
-style: dark
-color: fill
+style: fill
+color: dark
 description: It often happens that while working on one project, you need to use another project from within it. Perhaps it’s a library that a third party developed or that you’re developing separately and using in multiple parent projects. Git addresses this issue using submodules.
 ---
 
