@@ -1,41 +1,43 @@
-- title: Code 🧑‍💻📚 DJANGO 3 BY EXAMPLE by Antonio Melé 
+- title: 🧑‍💻📚 Django 3 by Example
   date: In progress...
   description: In this book, you will build a blog application, a social image bookmarking website,
     an online shop, and an e-learning platform.
     Step-by-step guidance will teach you how to integrate popular technologies,
     enhance your applications with AJAX, create RESTful APIs,
-    and set up a production environment for your Django projects.
+    and set up a production environment for your Django projects. (programming book by Antonio Melé)
 
-- title: Read 📚 THE HEAVENLY MAN by Brother Yun
+- title: 📚 The Heavenly Man
   date: Jan 18, 2021
   description: This is the intensely dramatic story of how God took a young, half-starved boy
     from a poor village in Henan Province and used him mightily to preach the gospel, despite
-    horrific opposition.
+    horrific opposition. (christian book - true life by Brother Yun)
 
-- title: Code 🧑‍💻📚 DJANGO FOR BEGINNERS by William S. Vincent
+- title: 🧑‍💻📚 Django for Beginners
   date: 2020...
   description: Django for Beginners is a project-based introduction to Django,
     the popular Python-based web framework. Suitable for total beginners who have never built a
     website before as well as professional programmers looking for a fast-paced guide to modern web
-    development and Django fundamentals.
+    development and Django fundamentals. (programming book by William S. Vincent)
 
-- title: Code 🧑‍💻📚 DJANGO CRASH COURSE by Daniel & Audrey Roy Greenfeld
+- title: 🧑‍💻📚 Django Crash Course by Daniel & Audrey Roy Greenfeld
   date: 2020
   description: The Django Crash Course book is a guided walkthrough tutorial
     where the authors of Two Scoops of Django build a real, production-quality Django web application
     from the ground up. This book is designed to build solid foundations for any developer looking
-    to get proficient with Django fast. 
+    to get proficient with Django fast. (programming book by Daniel Roy Greenfeld & Audrey Roy
+    Greenfeld)
 
-- title: Read 📚 ELON MUSK by Ashlee Vance
+- title: 📚 Elon Musk by Ashlee Vance
   date: 2020
   description: Elon Musk, the entrepreneur and innovator behind SpaceX, Tesla, and SolarCity,
     sold one of his internet companies, PayPal, for $1.5 billion. Ashlee Vance captures the full
     spectacle and arc of the genius's life and work, from his tumultuous upbringing in South Africa
     and flight to the United States to his dramatic technical innovations and entrepreneurial
-    pursuits.
+    pursuits. (Elon Musk biography by Ashlee Vance)
 
-- title: Listen 🎧📚 DEEP WORK by Cal Newport
+- title: 🎧📚 Deep Work
   date: 2018
   description: Deep work is the ability to focus without distraction on a cognitively demanding task.
-    It's a skill that allows you to quickly master complicated information and produce better results in less time.
-    Deep Work will make you better at what you do and provide the sense of true fulfillment that comes from craftsmanship.
+    It's a skill that allows you to quickly master complicated information and produce better results
+    in less time. Deep Work will make you better at what you do and provide the sense of true
+    fulfillment that comes from craftsmanship. (audiobook by Cal Newport)
