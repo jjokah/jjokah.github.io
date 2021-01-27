@@ -6,34 +6,133 @@
     enhance your applications with AJAX, create RESTful APIs,
     and set up a production environment for your Django projects. (programming book by Antonio Melé)
 
+- title: 🧑‍💻📚 Python Workout
+  date: In progress...
+  description: The only way to master a skill is to practice. In Python Workout, author Reuven M.
+    Lerner guides you through 50 carefully selected exercises that invite you to flex your
+    programming muscles. As you take on each new challenge, you’ll build programming skill and
+    confidence. (programming book by Reuven M. Lerner)
+
+- title: Quantum Leap Advantage (QLA)
+  date: In progress...
+  description: QLA is a proven formula that has over 40 years of proven success as illustrated by Dan
+    Pena’s own track record! But more importantly, to you the reader, since 1993 Dan has coached and
+    mentored thousands who have created stunning results with many multi-millionaires in record time!
+    Dan’s main precept is geometric growth is possible starting with no money! Hence, you must
+    realign your expectations, goals and comfort zone to implement and execute your new thoughts and
+    actions! (showcase of business strategies by Dan Pena)
+
 - title: 📚 The Heavenly Man
   date: Jan 18, 2021
   description: This is the intensely dramatic story of how God took a young, half-starved boy
     from a poor village in Henan Province and used him mightily to preach the gospel, despite
     horrific opposition. (christian book - true life by Brother Yun)
 
-- title: 🧑‍💻📚 Django for Beginners
-  date: 2020...
-  description: Django for Beginners is a project-based introduction to Django,
-    the popular Python-based web framework. Suitable for total beginners who have never built a
-    website before as well as professional programmers looking for a fast-paced guide to modern web
-    development and Django fundamentals. (programming book by William S. Vincent)
+- title: 📚 I'll Make You an Offer You Can't Refuse
+  date: Novemeber 2020
+  description: Insider Business Tips from a Former Mob Boss. By age 24, charming mob boss Michael 
+    Franzese was one of the wealthiest people on "Furtune" magazine s survey. As one of the rare
+    people who quit the mob and lived to tell about it, Franzese has a unique perspective on how
+    business is done. (business book by Michael Franzese)
 
-- title: 🧑‍💻📚 Django Crash Course by Daniel & Audrey Roy Greenfeld
-  date: 2020
+- title: 🎧📚 The Third Door
+  date: October 2020
+  description: The Third Door takes listeners on an unprecedented adventure - from hacking Warren
+    Buffett’s shareholders meeting to chasing Larry King through a grocery store to celebrating in a
+    nightclub with Lady Gaga - as Alex Banayan travels from icon to icon, decoding their success.
+    (audiobook by Alex Banayan)
+
+- title: 🥇📅 BuildforSDG Challenge
+  date: July - Oct 2020
+  description: In the BuildforSDG program, Facebook and Andela partnered to up-skill developers
+    across all countries in Africa through a seven weeks immersive program where selected developers
+    will work as full-stack developers or in agile remote teams to innovate industry led projects or
+    SDGs. (my team - disposify - was among the final 12 winners across Africa)
+
+- title: 🧑‍💻📚 Refactoring UI
+  date: August 2020
+  description: Make your ideas look awesome, without relying on a designer. This book shows how to
+    design beautiful user interfaces by yourself using specific tactics explained from a developer's
+    point-of-view. (programmer's design book by Adam Wathan & Steve Schoger)
+
+- title: 📚 Hold Me Tight
+  date: May 2020
+  description: Johnson teaches that the way to save and enrich a relationship is to reestablish safe
+    emotional connection and preserve the attachment bond. With this in mind, she focuses on key
+    moments in a relationship-from "Recognizing the Demon Dialogue" to "Revisiting a Rocky Moment" --
+    and uses them as touch points for seven healing conversations. (relationship book by Dr. Sue
+    Johnson)
+
+- title: 🧑‍💻📚 Django Crash Course
+  date: April 2020
   description: The Django Crash Course book is a guided walkthrough tutorial
     where the authors of Two Scoops of Django build a real, production-quality Django web application
     from the ground up. This book is designed to build solid foundations for any developer looking
     to get proficient with Django fast. (programming book by Daniel Roy Greenfeld & Audrey Roy
     Greenfeld)
 
-- title: 📚 Elon Musk by Ashlee Vance
+- title: 📚 Elon Musk
   date: 2020
   description: Elon Musk, the entrepreneur and innovator behind SpaceX, Tesla, and SolarCity,
     sold one of his internet companies, PayPal, for $1.5 billion. Ashlee Vance captures the full
     spectacle and arc of the genius's life and work, from his tumultuous upbringing in South Africa
     and flight to the United States to his dramatic technical innovations and entrepreneurial
-    pursuits. (Elon Musk biography by Ashlee Vance)
+    pursuits. (elon musk biography by Ashlee Vance)
+
+- title: 📚 Two Kinds of Faith
+  date: 2020
+  description: This book shows you,scripturally, what real faith is. It breaks down the difference
+    between hope and faith.It helps one to see that Gods Word is reality no matter what we may
+    "think" or "feel" in the natural while still being "realistic." (christian book by E. W. Kenyon)
+
+- title: 📚 Mind Hacking
+  date: 2019
+  description: Have you ever wished you could reprogram your brain, just as a hacker would a computer?
+    In this three-step guide to improving your mental habits, learn to take charge of your mind and
+    banish negative thoughts, habits, and anxiety - in just 21 days! (book by Sir John Hargrave)
+
+- title: 📚 Are you Dreaming?
+  date: 2019
+  description: This book brings the subject of conscious dreaming fully up to date, including the
+    latest discoveries, research, techniques and much more. It is the perfect guide to help you
+    unlock the hidden potential of your dreams, catering for both beginners and advanced lucid
+    dreamers alike. (book by Daniel Love)
+
+- title: 🎧📚 The Subtle Art of Not Giving a F*ck
+  date: 2019
+  description: In this generation-defining self-help guide, a superstar blogger cuts through the crap
+    to show us how to stop trying to be positive all the time so that we can truly become better,
+    happier people. This book is Mark's antidote to the coddling, let's-all-feel-good mind-set that
+    has infected modern society and spoiled a generation, rewarding them with gold medals just for
+    showing up. (audiobook by Mark Manson)
+
+- title: 📚 The Mind at Night
+  date: 2019
+  description: Over the past few decades, there has been a revolution in scientific knowledge about
+    why we dream, what's actually happening to the brain when we do, and what the sleeping mind
+    reveals about our waking hours.The award-winning science reporter Andrea Rock takes us into
+    modern sleep labs as she interprets their intellectual breakthroughs (book by Andrea Rock)
+
+- title: 📚 Your Future Self Will Thank You
+  date: 2019
+  description: Your Future Self Will Thank You is a compassionate and humorous guide to breaking bad
+    habits and growing your willpower. It explores Scripture’s teachings on how to live a disciplined
+    life while offering practical strategies for growth based on the science of self-control. (book
+    by Drew Dyck)
+
+- title: 🎧📚 Why We Sleep
+  date: 2019
+  description: Matthew Walker has made abundantly clear that sleep is one of the most important but
+    least understood aspects of our life. Until very recently, science had no answer to the question
+    of why we sleep, or what good it served, or why we suffer such devastating health consequences
+    when it is absent. (audiobook by Matthew Walker)
+
+- title: 🎧📚 So Good They Can't Ignore You
+  date: 2018
+  description: In an unorthodox approach, Georgetown University professor Cal Newport debunks the
+    long-held belief that "follow your passion" is good advice, and sets out on a quest to discover
+    the reality of how people end up loving their careers. Passion comes after you put in the hard
+    work to become excellent at something valuable, not before. (audiobook by Cal Newport)
 
 - title: 🎧📚 Deep Work
   date: 2018
@@ -41,3 +140,34 @@
     It's a skill that allows you to quickly master complicated information and produce better results
     in less time. Deep Work will make you better at what you do and provide the sense of true
     fulfillment that comes from craftsmanship. (audiobook by Cal Newport)
+
+- title: 🧑‍💻📚 Git Essentials
+  date: 2018
+  description: Since its inception, Git has attracted skilled developers due to its robust, powerful,
+    and reliable features. This book starts with an introduction to version control systems, and 
+    after this you'll delve deeply into the essentials of Git. This serves as a primer for the topics
+    to follow such as branching and merging, creating and managing a GitHub personal repository,
+    and fork and pull requests. (programming book by Ferdinando Santacrose)
+
+- title: 📚 John Von Neumann
+  date: 2017
+  description: Presents the biography of John von Neumann, one of the greatest scientist of the
+    century after Einstein. This book discusses Von Neumann's work in areas such as game theory,
+    mathematics, physics, and meteorology which formed the building blocks for the most important
+    discoveries of the century -> the modern computer, game theory, and the atom bomb. (john von
+    neumann biography by Norman Macrae)
+
+- title: 📚 A Mind for Numbers
+  date: 2017
+  description: Whether you are a student struggling to fulfill a math or science requirement, or you
+    are embarking on a career change that requires a new skill set, A Mind for Numbers offers the
+    tools you need to get a better grasp of that intimidating material. Dr. Oakley lets us in on the
+    secrets to learning effectively—secrets that even dedicated and successful students wish they’d
+    known earlier. (book by Barbara Oakley)
+
+- title: 🧑‍💻📚 Learning Python
+  date: 2017
+  description: Portable, powerful, and a breeze to use, Python is the popular open source
+    object-oriented programming language used for both standalone programs and scripting applications.
+    This book is an ideal way to begin to explore python, whether you’re new to programming or a
+    professional developer versed in other languages. (programming book by Mark Lutz)
