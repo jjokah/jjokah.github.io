@@ -1,4 +1,4 @@
-- title: 🧑‍💻📚 Django 3 by Example
+- title: 💻📚 Django 3 by Example
   date: In progress...
   description: In this book, you will build a blog application, a social image bookmarking website,
     an online shop, and an e-learning platform.
@@ -6,7 +6,7 @@
     enhance your applications with AJAX, create RESTful APIs,
     and set up a production environment for your Django projects. (programming book by Antonio Melé)
 
-- title: 🧑‍💻📚 Python Workout
+- title: 💻📚 Python Workout
   date: In progress...
   description: The only way to master a skill is to practice. In Python Workout, author Reuven M.
     Lerner guides you through 50 carefully selected exercises that invite you to flex your
@@ -49,7 +49,7 @@
     will work as full-stack developers or in agile remote teams to innovate industry led projects or
     SDGs. (my team - disposify - was among the final 12 winners across Africa)
 
-- title: 🧑‍💻📚 Refactoring UI
+- title: 💻📚 Refactoring UI
   date: August 2020
   description: Make your ideas look awesome, without relying on a designer. This book shows how to
     design beautiful user interfaces by yourself using specific tactics explained from a developer's
@@ -63,7 +63,7 @@
     and uses them as touch points for seven healing conversations. (relationship book by Dr. Sue
     Johnson)
 
-- title: 🧑‍💻📚 Django Crash Course
+- title: 💻📚 Django Crash Course
   date: April 2020
   description: The Django Crash Course book is a guided walkthrough tutorial
     where the authors of Two Scoops of Django build a real, production-quality Django web application
@@ -141,7 +141,7 @@
     in less time. Deep Work will make you better at what you do and provide the sense of true
     fulfillment that comes from craftsmanship. (audiobook by Cal Newport)
 
-- title: 🧑‍💻📚 Git Essentials
+- title: 💻📚 Git Essentials
   date: 2018
   description: Since its inception, Git has attracted skilled developers due to its robust, powerful,
     and reliable features. This book starts with an introduction to version control systems, and 
@@ -165,7 +165,7 @@
     secrets to learning effectively—secrets that even dedicated and successful students wish they’d
     known earlier. (book by Barbara Oakley)
 
-- title: 🧑‍💻📚 Learning Python
+- title: 💻📚 Learning Python
   date: 2017
   description: Portable, powerful, and a breeze to use, Python is the popular open source
     object-oriented programming language used for both standalone programs and scripting applications.
