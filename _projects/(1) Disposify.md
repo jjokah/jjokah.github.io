@@ -1,7 +1,7 @@
 ---
 name: Disposify
 tools: [django, tailwindcss, heroku]
-image: https://www.dropbox.com/s/5qrs4soo83os2jr/Screenshot%20from%202021-01-27%2018-56-19.png
+image: https://raw.githubusercontent.com/BuildForSDGCohort2/disposify/master/screenshot_01.png
 description: Disposify is a waste platform with the expertise and resources required to provide long-term solutions to the waste management challenges in Nigeria.
 ---
 
