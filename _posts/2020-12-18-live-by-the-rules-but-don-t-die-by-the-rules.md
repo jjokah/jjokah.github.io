@@ -17,7 +17,7 @@ This dev boy wanted to build something innovative, so he would contribute to his
 He decided to use python to build the future. Then he started learning python, but get stuck when he tried to strictly follow ALL rules (about clean code, proper documentation, optimization, best practices, and so on..). As he lived and died by the rules, he never pushed any code to production because he felt they all weren't good enough, yet‽_
 
 
-<img src="https://dev-to-uploads.s3.amazonaws.com/i/yj0koio6kosm84lhvbb9.jpg" alt="dev boy" width="50%"/>
+<img src="https://dev-to-uploads.s3.amazonaws.com/i/yj0koio6kosm84lhvbb9.jpg" alt="dev boy" width="500"/>
 
 ---
 
