@@ -18,7 +18,7 @@ He decided to use python to build the future. Then he started learning python, b
 
 
 Just like the dev boy, so many developers fall into this sh*t of not figuring out what matters the most (which is building stuff). If only they could take a trip to the "land of Production" and find out how a lot of messy codes are lying there and hell hasn't broken loose.
-![working messy code](https://dev-to-uploads.s3.amazonaws.com/i/6v5kg1pifytk0o4zosue.jpeg)
+![working messy code](https://https://images2.imgbox.com/10/b3/TqVVnCCX_o.jpg)
 
 
 #### So one quick advice,
