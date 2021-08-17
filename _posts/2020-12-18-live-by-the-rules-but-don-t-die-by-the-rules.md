@@ -17,22 +17,16 @@ This dev boy wanted to build something innovative, so he would contribute to his
 He decided to use python to build the future. Then he started learning python, but get stuck when he tried to strictly follow ALL rules (about clean code, proper documentation, optimization, best practices, and so on..). As he lived and died by the rules, he never pushed any code to production because he felt they all weren't good enough, yet‽_
 
 
-<img src="https://dev-to-uploads.s3.amazonaws.com/i/yj0koio6kosm84lhvbb9.jpg" alt="dev boy" width="500"/>
-
----
-
 Just like the dev boy, so many developers fall into this sh*t of not figuring out what matters the most (which is building stuff). If only they could take a trip to the "land of Production" and find out how a lot of messy codes are lying there and hell hasn't broken loose.
 ![working messy code](https://dev-to-uploads.s3.amazonaws.com/i/6v5kg1pifytk0o4zosue.jpeg)
 
----
 
 #### So one quick advice,
 just as the Facebook guy, Mark, said:
 > _Move fast and break things_
 
----
-I say to you all delaying the future,
- ___Move fast and build things.___
+I say to you all delaying the future:
+ > _Move fast and build things._
 
 ---
-######Make sure you give me a kudos by hitting the ❤️ button
+###### Stay Strong Soldier 💪
