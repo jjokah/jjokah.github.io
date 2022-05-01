@@ -8,15 +8,15 @@
 
 - name: HTML5/CSS3
   percentage: 85
-  color: secondary
+  color: danger
 
 - name: Javascript
   percentage: 80
-  color: dark
+  color: danger
 
 - name: TailwindCSS
   percentage: 80
-  color:
+  color: danger
 
 - name: Algorithm
   percentage: 90
