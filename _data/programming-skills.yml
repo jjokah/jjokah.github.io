@@ -4,40 +4,36 @@
 
 - name: Django
   percentage: 85
-  color: warning
+  color: danger
 
 - name: HTML5/CSS3
   percentage: 85
   color: secondary
 
 - name: Javascript
-  percentage: 65
+  percentage: 80
   color: dark
 
 - name: TailwindCSS
-  percentage: 70
+  percentage: 80
   color:
 
 - name: Algorithm
-  percentage: 70
-  color: info
+  percentage: 90
+  color: danger
 
 - name: System Admin
-  percentage: 60
-  color: secondary
+  percentage: 85
+  color: danger
 
 - name: Cloud comp.
-  percentage: 60
-  color: warning
-
-- name: OOP
   percentage: 80
-  color: success
+  color: danger
 
-- name: Postgres SQL
-  percentage: 60
-  color: dark
+- name: Database Mgt.
+  percentage: 85
+  color: danger
 
-- name: Networking
-  percentage: 50
-  color: secondary
+- name: AI & Machine Learning
+  percentage: 80
+  color: danger

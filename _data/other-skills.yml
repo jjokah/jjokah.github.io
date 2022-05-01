@@ -1,19 +1,19 @@
 - name: Design
-  percentage: 70
-  color: info
+  percentage: 90
+  color: danger
 
 - name: Creative Writing
-  percentage: 85
-  color: success
-
-- name: Chess
-  percentage: 60
-  color: 
+  percentage: 90
+  color: danger
 
 - name: Communication
-  percentage: 70
-  color: dark
+  percentage: 85
+  color: danger
 
 - name: Work Ethic
+  percentage: 99
+  color: danger
+
+- name: Team Work
   percentage: 95
   color: danger
