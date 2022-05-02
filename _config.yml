@@ -2,7 +2,6 @@
 title               : jjokah
 description         : >-
                        There is an Algorithm for everything under heaven.
-                       - jjokah 3:1
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : jjokah/portfolYOU     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : jjokah/portfolYOU
