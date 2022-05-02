@@ -18,7 +18,7 @@ John Johnson Okah is an enthusiastic Software Developer with 3+ years of experie
 
 
 <br>
-## **Experience** 💼
+# Experience 💼
 <div class="row">
 {% include about/timeline.html %}
 </div>
