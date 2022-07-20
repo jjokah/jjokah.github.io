@@ -1,17 +1,11 @@
-- title: Student, University of Nigeria Nsukka
-  from: 2014
-  to: 2018
-  description: During my Computer Science BSc. Degree, I learnt some concept about
-               programming and general computing. Algorithm, Data Structure, Artificial
-               intelligence and Operating System are some of the topics I went through
-               during this period.
-
-- title: Software Developer, WiiTech Synergy, Abuja Nigeria
-  from: 2018
-  to: 2019
-  description: I was responsible for developing softwares for the company. And I built a
-               hotel management system, called "graceland". The app enables one to
-               take complete inventory of stocks.
+- title: Full Stack Developer, MAGNISALE, Abuja Nigeria.
+  from: 2021
+  to: Date
+  description: I worked on different Ecommerce websites, designed responsive sites for
+               clients, and also integrated odoo POS platform (an open-source python 
+               package) to some businesses. I coordinated a highly motivated
+               team dedicated to driving sales for businesses by scaling their brands
+               with tech.
 
 - title: Web Developer, BuildforSDG Andela, Remote.
   from: 2020
@@ -20,3 +14,18 @@
                customers to collectors for seamless waste disposal. During the
                facebook-andela program, I was the lead developer and I was responsible
                for the backend development and a stable deployment.
+
+- title: Software Developer, WiiTech Synergy, Abuja Nigeria
+  from: 2018
+  to: 2019
+  description: I was responsible for developing softwares for the company. And I built a
+               hotel management system, called "graceland". The app enables one to
+               take complete inventory of stocks.
+
+- title: Student, University of Nigeria Nsukka
+  from: 2014
+  to: 2018
+  description: During my Computer Science BSc. Degree, I learnt some concept about
+               programming and general computing. Algorithm, Data Structure, Artificial
+               intelligence and Operating System are some of the topics I went through
+               during this period.
