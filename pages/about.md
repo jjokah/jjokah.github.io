@@ -7,7 +7,7 @@ weight: 4
 
 
 # **JJOKAH** in detail ✍️
-John Johnson Okah is an enthusiastic Software Developer with 3+ years of experience and a focus on web design, artificial intelligence, & machine learning. John believes that he needs to contribute ‘a whole lot’ to humanity; it’s his way of saying “thank you for letting me in”. To sum him all up, he is one who always tend to stay curious & creative in every aspect of life
+John Johnson Okah is an enthusiastic Software Developer with 3+ years of experience and a focus on web design, artificial intelligence, & machine learning. John believes that he needs to contribute ‘a whole lot’ to humanity; it’s his way of saying “thank you for letting me in”. To sum him all up, he is one who always tend to stay curious & creative in every aspect of life.
 
 
 
