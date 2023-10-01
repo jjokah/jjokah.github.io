@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6, figure {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #000000e0;
+  background: #000000ea;
 }
 #fh5co-header .display-t,
 .fh5co-cover .display-t {
@@ -1281,7 +1281,7 @@ input[type="text"] {
   margin: 0px !important;
 }
 
-.fh5co-loader {
+/* .fh5co-loader {
   position: fixed;
   left: 0px;
   top: 0px;
@@ -1289,7 +1289,7 @@ input[type="text"] {
   height: 100%;
   z-index: 9999;
   background: url(../images/loader.gif) center no-repeat #fff;
-}
+} */
 
 .js .animate-box {
   opacity: 0;
