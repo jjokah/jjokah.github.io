@@ -4,12 +4,8 @@
 // and fetches individual .md files for the post viewer.
 // ============================================================
 
-const POSTS_ROOT = (() => {
-  // Resolve the path to /posts/ regardless of which page we're on
-  const depth = location.pathname.split('/').filter(Boolean).length;
-  // On GitHub Pages, the repo root is at the origin
-  return location.origin + '/posts/';
-})();
+// Posts always live at /blog/posts/ — absolute from origin root
+const POSTS_ROOT = location.origin + '/blog/posts/';
 
 /* ---------- Fetch post manifest ---------- */
 async function fetchManifest() {
