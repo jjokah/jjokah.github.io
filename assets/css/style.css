@@ -100,20 +100,22 @@ p  { color: var(--text-dim); font-size: 1rem; }
 .section-header h2::after {
   content: '';
   display: block;
+  width: 40px;
   height: 3px;
-  background: linear-gradient(90deg, var(--red), transparent);
-  margin-top: 0.5rem;
+  background: var(--red);
+  margin: 0.6rem auto 0;
   border-radius: 2px;
 }
 
 .section-label {
-  display: inline-block;
+  display: block;
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
+  padding-left: 0.25em; /* Compensate for letter-spacing to center perfectly */
   text-transform: uppercase;
   color: var(--red-light);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 /* ---------- Navbar ---------- */
