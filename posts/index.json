@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "2026-03-25-hello-world",
+    "title": "Hello World — Why I Started This Blog",
+    "date": "2026-03-25",
+    "excerpt": "A quick introduction to who I am, why I'm building in public, and what you can expect from this space.",
+    "tags": ["personal", "ai", "writing"],
+    "readTime": 4
+  },
+  {
+    "slug": "2026-03-20-building-ai-apps-with-transformers",
+    "title": "Building AI Apps with Hugging Face Transformers",
+    "date": "2026-03-20",
+    "excerpt": "A practical walkthrough of fine-tuning a pre-trained model for a custom NLP task using the 🤗 Transformers library.",
+    "tags": ["ai", "python", "transformers", "nlp"],
+    "readTime": 8
+  },
+  {
+    "slug": "2026-03-10-system-design-for-ml-engineers",
+    "title": "System Design Principles Every ML Engineer Should Know",
+    "date": "2026-03-10",
+    "excerpt": "From feature stores to model serving, here are the system design patterns that separate good ML systems from great ones.",
+    "tags": ["system-design", "ml", "engineering"],
+    "readTime": 10
+  }
+]
