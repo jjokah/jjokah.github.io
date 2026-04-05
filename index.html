@@ -215,46 +215,12 @@
     border: 1px solid var(--red);
   }
 
-  .hero-img-placeholder {
+  .hero-img {
     width: 100%;
     height: 100%;
-    background: var(--surface);
+    object-fit: cover;
+    display: block;
     border: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .avatar-svg {
-    width: 160px;
-    opacity: 0.85;
-  }
-
-  .hero-initials {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3.5rem;
-    color: var(--red);
-    letter-spacing: 0.08em;
-    line-height: 1;
-  }
-
-  .hero-handle {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--muted);
-    letter-spacing: 0.2em;
-  }
-
-  .corner-mark {
-    position: absolute;
-    top: 12px; left: 12px;
-    width: 20px; height: 20px;
-    border-top: 2px solid var(--red);
-    border-left: 2px solid var(--red);
   }
 
   /* ── SECTION COMMONS ──────────────────────────── */
@@ -556,11 +522,7 @@
 
   <div class="hero-image-col">
     <div class="hero-img-wrap">
-      <div class="hero-img-placeholder">
-        <div class="corner-mark"></div>
-        <div class="hero-initials">JJO</div>
-        <div class="hero-handle">@jjokah</div>
-      </div>
+      <img src="profile.jpg" alt="JohnJohnson Okah" class="hero-img">
     </div>
   </div>
 </section>
