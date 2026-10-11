@@ -1,792 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090807">
   <title>JohnJohnson Okah — AI Engineer</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
+    /* #911002 is ~2.2:1 on black, so it is a fill and a rule. Type on black uses --red-ink. Type on the red uses --on-red. */
     :root {
       --red: #911002;
-      --red-dim: #6a0c02;
-      --red-bright: #b81503;
-      --black: #080808;
-      --off-black: #111111;
-      --surface: #161616;
-      --border: #2a2a2a;
-      --muted: #555;
-      --text: #e8e3dc;
-      --text-dim: #9a9591;
+      --red-ink: #ff6b57;
+      --on-red: #fff8f4;
+      --paper: #f3ece4;
+      --ink-on-paper: #1a1412;
+      --cream: #f6f1ea;
+      --body: #c9c3ba;
+      --meta: #a39c94;
+      --bg: #090807;
+      --line: rgba(246, 241, 234, 0.14);
+      --nav: calc(72px + env(safe-area-inset-top));
+      --serif: "Fraunces", "Iowan Old Style", Palatino, Georgia, serif;
+      --sans: "Outfit", "Segoe UI", sans-serif;
+      --mono: "IBM Plex Mono", "Segoe UI Mono", ui-monospace, monospace;
     }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; }
+    * { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      background: var(--black);
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
     }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    :focus { outline: none; }
+    :focus-visible { outline: 2px solid var(--red-ink); outline-offset: 3px; }
+    ::selection { background: var(--red); color: var(--on-red); }
+    .sr {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    .skip {
+      position: absolute; left: 1rem; top: 0; transform: translateY(-120%);
+      background: var(--red); color: var(--on-red); padding: 0.7rem 0.9rem; z-index: 80;
+    }
+    .skip:focus { transform: none; }
 
-    /* ── NAV ─────────────────────────────────────── */
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 4rem;
-      border-bottom: 1px solid var(--border);
-      background: rgba(8, 8, 8, 0.85);
-      backdrop-filter: blur(12px);
+      position: fixed; inset: 0 0 auto 0; z-index: 40;
+      height: var(--nav);
+      padding: env(safe-area-inset-top) max(1.25rem, 4vw) 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
     }
-
-    .nav-logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.4rem;
-      letter-spacing: 0.12em;
-      color: var(--text);
-      text-decoration: none;
+    .logo {
+      font-family: var(--serif);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      font-size: 1.35rem;
+      display: inline-flex; align-items: center; gap: 0.35rem;
     }
-
-    .nav-logo span {
-      color: var(--red);
+    .logo span {
+      background: var(--red); color: var(--on-red);
+      font-family: var(--mono); font-weight: 500; font-size: 0.72rem;
+      letter-spacing: 0.14em; padding: 0.28rem 0.4rem 0.22rem;
     }
-
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-    }
-
+    .nav-links { display: flex; gap: 1.35rem; list-style: none; }
     .nav-links a {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      text-decoration: none;
-      transition: color 0.2s;
+      font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--meta); padding: 0.35rem 0;
     }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a[aria-current="true"] { color: var(--cream); box-shadow: inset 0 -2px 0 var(--red); }
 
-    .nav-links a:hover {
-      color: var(--red);
-    }
+    main { padding-top: var(--nav); }
+    section[id] { scroll-margin-top: var(--nav); }
 
-    /* ── HERO ─────────────────────────────────────── */
-    #hero {
-      min-height: 100vh;
+    .hero {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: 8rem 4rem 4rem;
-      position: relative;
-      overflow: hidden;
-      gap: 4rem;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 60% at 70% 50%, rgba(145, 16, 2, 0.12) 0%, transparent 70%),
-        repeating-linear-gradient(90deg,
-          transparent,
-          transparent 79px,
-          rgba(255, 255, 255, 0.018) 80px),
-        repeating-linear-gradient(0deg,
-          transparent,
-          transparent 79px,
-          rgba(255, 255, 255, 0.018) 80px);
-      pointer-events: none;
-    }
-
-    .hero-text {
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-tag {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 1.4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-    }
-
-    .hero-tag::before {
-      content: '';
-      display: block;
-      width: 28px;
-      height: 1px;
-      background: var(--red);
-    }
-
-    h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3.5rem, 7vw, 6rem);
-      line-height: 0.95;
-      letter-spacing: 0.02em;
-      color: var(--text);
-      margin-bottom: 1.8rem;
-      display: flex;
-      flex-direction: column;
-    }
-
-    h1 .hero-fname {
-      font-size: 0.75em;
-      letter-spacing: 0.04em;
-    }
-
-    h1 .hero-lname {
-      color: var(--red);
-      font-size: 1.6em;
-      letter-spacing: -0.01em;
-      line-height: 0.85;
-    }
-
-    .hero-bio {
-      font-size: 1rem;
-      line-height: 1.75;
-      color: var(--text-dim);
-      max-width: 480px;
-      margin-bottom: 2.5rem;
-    }
-
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-bottom: 2.8rem;
-    }
-
-    .skill-tag {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      padding: 0.4rem 0.9rem;
-      border: 1px solid var(--border);
-      color: var(--text-dim);
-      border-radius: 2px;
-      transition: border-color 0.2s, color 0.2s;
-    }
-
-    .skill-tag:hover {
-      border-color: var(--red);
-      color: var(--text);
-    }
-
-    .hero-formula {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.82rem;
-      color: var(--red-bright);
-      padding: 0.9rem 1.2rem;
-      border-left: 2px solid var(--red);
-      background: rgba(145, 16, 2, 0.07);
-      display: inline-block;
-      letter-spacing: 0.04em;
-    }
-
-    /* IMAGE COLUMN */
-    .hero-image-col {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-img-wrap {
-      position: relative;
-      width: 340px;
-      height: 420px;
-    }
-
-    .hero-img-wrap::before {
-      content: '';
-      position: absolute;
-      inset: -10px;
-      border: 1px solid rgba(145, 16, 2, 0.35);
-      transform: rotate(2deg);
-    }
-
-    .hero-img-wrap::after {
-      content: 'AI ENGINEER';
-      position: absolute;
-      bottom: -18px;
-      right: -18px;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.3em;
-      color: var(--red);
-      background: var(--black);
-      padding: 0.3rem 0.8rem;
-      border: 1px solid var(--red);
-    }
-
-    .hero-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      border: 1px solid var(--border);
-    }
-
-    /* ── SECTION COMMONS ──────────────────────────── */
-    section {
-      padding: 6rem 4rem;
-      border-top: 1px solid var(--border);
-      position: relative;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1.2rem;
-      margin-bottom: 3.5rem;
-    }
-
-    .section-num {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--red);
-      letter-spacing: 0.2em;
-    }
-
-    .section-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      letter-spacing: 0.06em;
-      color: var(--text);
-    }
-
-    .section-rule {
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-      margin-left: 0.5rem;
-    }
-
-    /* ── WORKS ────────────────────────────────────── */
-    #works {
-      background: var(--off-black);
-    }
-
-    .works-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5px;
-      background: var(--border);
-      border: 1px solid var(--border);
-    }
-
-    .work-card {
-      background: var(--off-black);
-      padding: 2rem;
-      text-decoration: none;
-      display: block;
-      transition: background 0.22s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .work-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 3px;
-      height: 100%;
-      background: var(--red);
-      transform: scaleY(0);
-      transform-origin: bottom;
-      transition: transform 0.28s;
-    }
-
-    .work-card:hover {
-      background: var(--surface);
-    }
-
-    .work-card:hover::before {
-      transform: scaleY(1);
-    }
-
-    .work-type {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 0.9rem;
-    }
-
-    .work-title {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      font-size: 1.05rem;
-      color: var(--text);
-      margin-bottom: 0.7rem;
-      line-height: 1.4;
-    }
-
-    .work-desc {
-      font-size: 0.88rem;
-      color: var(--text-dim);
-      line-height: 1.65;
-    }
-
-    .work-arrow {
-      display: inline-block;
-      margin-top: 1.2rem;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--red);
-      letter-spacing: 0.12em;
-      opacity: 0;
-      transform: translateX(-6px);
-      transition: opacity 0.22s, transform 0.22s;
-    }
-
-    .work-card:hover .work-arrow {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    /* ── CONTACT ──────────────────────────────────── */
-    #contact {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      grid-template-columns: minmax(280px, 40vw) minmax(0, 1fr);
       align-items: start;
     }
-
-    .contact-left h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      line-height: 0.95;
-      margin-bottom: 1.2rem;
-      color: var(--text);
+    .hero-media {
+      position: sticky; top: var(--nav); align-self: start;
+      height: calc(100vh - var(--nav));
+      height: calc(100dvh - var(--nav));
+      background: var(--red);
+      display: flex; flex-direction: column;
+      padding: 0.85rem 0.85rem 0;
+      margin: 0;
     }
-
-    .contact-left h2 em {
-      color: var(--red);
-      font-style: normal;
+    .hero-media img {
+      width: 100%; flex: 1; min-height: 0; object-fit: cover; object-position: center 18%;
+      background: #6e0c02;
     }
-
-    .contact-left p {
-      color: var(--text-dim);
-      font-size: 0.95rem;
-      line-height: 1.75;
-      max-width: 380px;
+    .hero-media figcaption {
+      color: var(--on-red);
+      display: flex; justify-content: space-between; gap: 1rem;
+      padding: 0.85rem 0.35rem 0.95rem;
+      font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase;
     }
-
-    .socials {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      border: 1px solid var(--border);
+    .hero-copy {
+      min-height: calc(100vh - var(--nav));
+      min-height: calc(100dvh - var(--nav));
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 3.5rem max(1.5rem, 4vw) 3.5rem clamp(1.5rem, 3vw, 3.5rem);
     }
-
-    .social-link {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-      padding: 1.3rem 1.5rem;
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-      transition: background 0.2s;
-      position: relative;
-      overflow: hidden;
+    .hero-copy-inner { max-width: 40rem; }
+    .kicker {
+      font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--red-ink); margin-bottom: 1.1rem;
     }
-
-    .social-link:last-child {
-      border-bottom: none;
+    h1 { font-family: var(--serif); font-weight: 500; font-optical-sizing: auto; }
+    h1 .first {
+      display: block; font-style: italic; font-weight: 500;
+      font-size: clamp(1.8rem, 3vw, 2.7rem); letter-spacing: -0.02em; line-height: 1.1;
     }
-
-    .social-link:hover {
-      background: rgba(145, 16, 2, 0.08);
+    h1 .last {
+      display: inline-block; font-weight: 700;
+      font-size: clamp(4.6rem, 8vw, 7.4rem); letter-spacing: -0.045em; line-height: 0.86;
+      border-bottom: 8px solid var(--red); padding-bottom: 0.02em; margin-top: 0.15rem;
     }
-
-    .social-link:hover .social-name {
-      color: var(--red);
+    .bio { margin-top: 1.6rem; color: var(--body); max-width: 42rem; text-wrap: pretty; }
+    .skills { list-style: none; margin-top: 2rem; border-top: 1px solid var(--line); }
+    .skills li {
+      display: grid; grid-template-columns: 2.4rem 1fr; gap: 0.75rem; align-items: baseline;
+      padding: 0.85rem 0; border-bottom: 1px solid var(--line);
+      font-size: 1.02rem;
     }
-
-    .social-icon {
-      width: 36px;
-      height: 36px;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 1rem;
-      transition: border-color 0.2s;
+    .skills span { font-family: var(--mono); font-size: 0.75rem; color: var(--red-ink); letter-spacing: 0.08em; }
+    .formula {
+      margin-top: 2rem; background: var(--paper); color: var(--red);
+      padding: 1.1rem 1.2rem 1.15rem;
     }
-
-    .social-link:hover .social-icon {
-      border-color: var(--red);
+    .formula figcaption {
+      font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.16em;
+      text-transform: uppercase; margin-bottom: 0.45rem;
     }
+    .formula p { font-family: var(--mono); font-size: clamp(0.82rem, 2vw, 0.98rem); line-height: 1.45; }
 
-    .social-info {
-      flex: 1;
+    .section { padding: 5rem max(1.25rem, 4vw) 5.25rem; border-top: 1px solid var(--line); }
+    .section-head {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+      margin-bottom: 1.25rem;
     }
-
-    .social-platform {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.2rem;
+    .section h2 {
+      font-family: var(--serif); font-weight: 500; font-size: clamp(2.4rem, 5vw, 4rem);
+      letter-spacing: -0.03em; line-height: 0.95; text-wrap: balance;
     }
+    .count { font-family: var(--mono); color: var(--meta); font-size: 0.78rem; letter-spacing: 0.14em; }
 
-    .social-name {
-      font-size: 0.95rem;
-      color: var(--text);
-      transition: color 0.2s;
+    .row {
+      display: grid;
+      grid-template-columns: 3.4rem minmax(0, 1fr) auto;
+      column-gap: 1rem; row-gap: 0.3rem;
+      padding: 1.35rem 0.7rem;
+      border-top: 1px solid var(--line);
+      color: inherit;
     }
-
-    .social-ext {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--muted);
+    .rows .row:last-child { border-bottom: 1px solid var(--line); }
+    .num {
+      grid-row: 1 / span 3; font-family: var(--mono); color: var(--red-ink);
+      font-size: 0.8rem; letter-spacing: 0.08em; padding-top: 0.35rem;
     }
+    .kind {
+      font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--meta);
+    }
+    .go, .state {
+      font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--red-ink); align-self: center;
+    }
+    .state { color: var(--meta); }
+    .title {
+      grid-column: 2 / span 2; font-family: var(--serif); font-weight: 500;
+      font-size: clamp(1.45rem, 2vw, 1.85rem); letter-spacing: -0.02em; line-height: 1.15;
+      text-wrap: balance;
+    }
+    .desc { grid-column: 2 / span 2; color: var(--body); max-width: 62ch; font-size: 1rem; }
+    a.row { transition: background 0.18s ease, color 0.18s ease; }
+    a.row .go { transition: transform 0.18s ease; }
+    a.row:hover, a.row:focus-visible {
+      background: var(--red); color: var(--on-red);
+    }
+    a.row:hover .num, a.row:hover .kind, a.row:hover .title, a.row:hover .desc, a.row:hover .go,
+    a.row:focus-visible .num, a.row:focus-visible .kind, a.row:focus-visible .title,
+    a.row:focus-visible .desc, a.row:focus-visible .go { color: var(--on-red); }
+    a.row:hover .go, a.row:focus-visible .go { transform: translateX(4px); }
 
-    /* ── FOOTER ───────────────────────────────────── */
+    .contact-grid {
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 0.85fr);
+      gap: 3rem 4rem; align-items: start;
+    }
+    .contact-grid h2 {
+      font-family: var(--serif); font-weight: 500; font-size: clamp(3rem, 6vw, 5.1rem);
+      letter-spacing: -0.035em; line-height: 0.92; margin: 0.4rem 0 1rem;
+    }
+    .mark {
+      background: var(--red); color: var(--on-red);
+      padding: 0 0.12em 0.02em; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+    }
+    .contact-grid .bio { margin-top: 0; max-width: 36rem; }
+    .socials { list-style: none; border-top: 1px solid var(--line); }
+    .social {
+      display: grid; grid-template-columns: 2.4rem minmax(0, 1fr) auto;
+      gap: 0.9rem; align-items: center;
+      padding: 0.95rem 0.2rem; border-bottom: 1px solid var(--line); min-height: 4.25rem;
+    }
+    .social:hover .handle, .social:focus-visible .handle { color: var(--red-ink); }
+    .ico {
+      width: 2.35rem; height: 2.35rem; border: 1px solid var(--line);
+      display: grid; place-items: center; color: var(--body);
+    }
+    .ico svg { width: 16px; height: 16px; display: block; }
+    .ico-text { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em; }
+    .plat { display: block; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--meta); }
+    .handle { display: block; overflow-wrap: anywhere; }
+    .ext { font-family: var(--mono); color: var(--meta); }
+
     footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 4rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      border-top: 1px solid var(--line);
+      padding: 1.4rem max(1.25rem, 4vw) calc(1.4rem + env(safe-area-inset-bottom));
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
     }
+    footer p { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.08em; color: var(--meta); }
 
-    .footer-logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.1rem;
-      letter-spacing: 0.15em;
-      color: var(--text);
-    }
-
-    .footer-logo span {
-      color: var(--red);
-    }
-
-    .footer-copy {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--muted);
-      letter-spacing: 0.12em;
-    }
-
-    /* ── ANIMATIONS ───────────────────────────────── */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(24px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero-tag {
-      animation: fadeUp 0.5s ease both;
-    }
-
-    h1 {
-      animation: fadeUp 0.55s 0.1s ease both;
-    }
-
-    .hero-bio {
-      animation: fadeUp 0.55s 0.2s ease both;
-    }
-
-    .skills-list {
-      animation: fadeUp 0.55s 0.3s ease both;
-    }
-
-    .hero-formula {
-      animation: fadeUp 0.55s 0.4s ease both;
-    }
-
-    .hero-image-col {
-      animation: fadeUp 0.7s 0.15s ease both;
-    }
-
-    /* ── RESPONSIVE ───────────────────────────────── */
     @media (max-width: 860px) {
-      nav {
-        padding: 1rem 1.5rem;
+      .hero { display: block; }
+      .hero-media {
+        position: relative; top: auto; height: auto; display: block;
       }
-
-      .nav-links {
-        gap: 1.2rem;
-      }
-
-      #hero {
-        grid-template-columns: 1fr;
-        padding: 7rem 1.5rem 4rem;
-        gap: 3rem;
-      }
-
-      .hero-image-col {
-        order: -1;
-      }
-
-      .hero-img-wrap {
-        width: 240px;
-        height: 300px;
-      }
-
-      section {
-        padding: 4rem 1.5rem;
-      }
-
-      #contact {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      footer {
-        padding: 1.5rem;
-        flex-direction: column;
-        gap: 0.8rem;
-        text-align: center;
-      }
+      .hero-media img { height: min(72vw, 460px); flex: none; }
+      .hero-copy { min-height: 0; padding: 2.25rem 1.25rem 2.75rem; }
+      .section { padding: 3.25rem 1.25rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .title, .desc { grid-column: 2; }
+      .row { padding-inline: 0.2rem; }
+    }
+    @media (max-width: 380px) {
+      .nav-links { gap: 0.75rem; }
+      .nav-links a { letter-spacing: 0.08em; font-size: 0.68rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
     }
   </style>
 </head>
-
 <body>
-
-  <!-- NAV -->
-  <nav>
-    <a href="#hero" class="nav-logo">JJ<span>OKAH</span></a>
+  <a class="skip" href="#about">Skip to content</a>
+  <nav aria-label="Primary">
+    <a class="logo" href="#about">JJ<span>OKAH</span></a>
     <ul class="nav-links">
-      <li><a href="#hero">About</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#works">Works</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-
-    <div class="hero-text">
-      <div class="hero-tag">AI Engineer &amp; Systems Thinker</div>
-      <h1>
-        <span class="hero-fname">JohnJohnson</span>
-        <span class="hero-lname">Okah</span>
-      </h1>
-      <p class="hero-bio">
-        Passionate about solving computational problems, with deep proficiency in System Design applied across
-        Artificial Intelligence, Cybersecurity, and Software Development. Beyond engineering, I explore the human mind
-        and the workings of The Unconscious.
-      </p>
-
-      <div class="skills-list">
-        <span class="skill-tag">🤖 AI &amp; Machine Learning</span>
-        <span class="skill-tag">🌐 Software Development</span>
-        <span class="skill-tag">🔒 Cybersecurity</span>
-        <span class="skill-tag">🧠 Research</span>
+  <main>
+    <section class="hero" id="about">
+      <figure class="hero-media">
+        <img src="profile.jpg" alt="Portrait of JohnJohnson Okah" width="640" height="640" decoding="async">
+        <figcaption><span>Fig. 01</span><span>Portrait</span></figcaption>
+      </figure>
+      <div class="hero-copy">
+        <div class="hero-copy-inner">
+          <p class="kicker">AI Engineer &amp; Systems Thinker</p>
+          <h1>
+            <span class="first">JohnJohnson</span>
+            <span class="last">Okah</span>
+          </h1>
+          <p class="bio">Passionate about solving computational problems, with deep proficiency in System Design applied across Artificial Intelligence, Cybersecurity, and Software Development. Beyond engineering, I explore the human mind and the workings of The Unconscious.</p>
+          <ul class="skills">
+            <li><span>01</span> AI &amp; Machine Learning</li>
+            <li><span>02</span> Software Development</li>
+            <li><span>03</span> Cybersecurity</li>
+            <li><span>04</span> Research</li>
+          </ul>
+          <figure class="formula">
+            <figcaption>Working principle</figcaption>
+            <p aria-label="For every problem p in the set of problems, there exists an approach a in the set of approaches such that a applied to p equals the solution of p.">∀ p∈P, ∃ a∈A : a(p) = solution(p)</p>
+          </figure>
+        </div>
       </div>
+    </section>
 
-      <div class="hero-formula">
-        ∀ p∈P, ∃ a∈A : a(p) = solution(p)
+    <section class="section" id="works" aria-labelledby="works-title">
+      <div class="section-head">
+        <div>
+          <p class="kicker">02 — Works</p>
+          <h2 id="works-title">Featured works</h2>
+        </div>
+        <p class="count">06</p>
       </div>
-    </div>
-
-    <div class="hero-image-col">
-      <div class="hero-img-wrap">
-        <img src="profile.jpg" alt="JohnJohnson Okah" class="hero-img">
+      <div class="rows">
+        <a class="row" href="https://huggingface.co/blog/jjokah/small-language-model" target="_blank" rel="noopener noreferrer">
+          <span class="num">01</span>
+          <span class="kind">Article</span>
+          <span class="go">Read →<span class="sr"> (opens in a new tab)</span></span>
+          <h3 class="title">Small Language Models</h3>
+          <p class="desc">A published deep-dive on Hugging Face exploring the architecture, trade-offs, and use cases of SLMs in production AI systems.</p>
+        </a>
+        <a class="row" href="https://magnisale.com" target="_blank" rel="noopener noreferrer">
+          <span class="num">02</span>
+          <span class="kind">Project</span>
+          <span class="go">Visit →<span class="sr"> (opens in a new tab)</span></span>
+          <h3 class="title">Magnisale AI Business System</h3>
+          <p class="desc">AI-powered business automation platform architected around intelligent agents, CRM integration, and data-driven lead generation pipelines.</p>
+        </a>
+        <a class="row" href="https://app.terraskills.com/slides/artificial-intelligence-1" target="_blank" rel="noopener noreferrer">
+          <span class="num">03</span>
+          <span class="kind">Lecture</span>
+          <span class="go">Explore →<span class="sr"> (opens in a new tab)</span></span>
+          <h3 class="title">Terraskills AI Course</h3>
+          <p class="desc">A ground-up Artificial Intelligence course for the everyday professional. Real tools, real projects, real results. Delivered at Terraskills for anyone ready to lead in the AI era.</p>
+        </a>
+        <article class="row">
+          <span class="num">04</span>
+          <span class="kind">Project</span>
+          <span class="state">In progress</span>
+          <h3 class="title">ERP Deployment</h3>
+          <p class="desc">End-to-end Enterprise Resource Planning system setup for businesses. Deployments covering CRM, inventory, HR, accounting, sales and more.</p>
+        </article>
+        <article class="row">
+          <span class="num">05</span>
+          <span class="kind">Research</span>
+          <span class="state">In progress</span>
+          <h3 class="title">Subconscious Alignment</h3>
+          <p class="desc">Subconscial is an active research project that bridges AI technology and psychological frameworks to help people understand, interpret, and align with their subconscious.</p>
+        </article>
+        <article class="row">
+          <span class="num">06</span>
+          <span class="kind">Project</span>
+          <span class="state">In progress</span>
+          <h3 class="title">Resonance Agent</h3>
+          <p class="desc">An AI-powered lead generation agent covering the full pipeline: from discovering qualified prospects to enriching contact data and triggering targeted outreach.</p>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WORKS -->
-  <section id="works">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <h2 class="section-title">Featured Works</h2>
-      <div class="section-rule"></div>
-    </div>
-
-    <div class="works-grid">
-
-      <a href="https://huggingface.co/blog/jjokah/small-language-model" target="_blank" rel="noopener noreferrer"
-        class="work-card">
-        <div class="work-type">Article</div>
-        <div class="work-title">Small Language Models</div>
-        <div class="work-desc">A published deep-dive on Hugging Face exploring the architecture, trade-offs, and use
-          cases of SLMs in production AI systems.</div>
-        <span class="work-arrow">READ →</span>
-      </a>
-
-      <a href="https://magnisale.com" target="_blank" rel="noopener noreferrer" class="work-card">
-        <div class="work-type">Project</div>
-        <div class="work-title">Magnisale AI Business System</div>
-        <div class="work-desc">AI-powered business automation platform architected around intelligent agents, CRM
-          integration, and data-driven lead generation pipelines.</div>
-        <span class="work-arrow">VISIT →</span>
-      </a>
-
-      <a href="https://app.terraskills.com/slides/artificial-intelligence-1" target="_blank" rel="noopener noreferrer"
-        class="work-card">
-        <div class="work-type">Lecture</div>
-        <div class="work-title">Terraskills AI Course</div>
-        <div class="work-desc">A ground-up Artificial Intelligence course for the everyday professional.
-          Real tools, real projects, real results.
-          Delivered at Terraskills for anyone ready to lead in the AI era.</div>
-        <span class="work-arrow">EXPLORE →</span>
-      </a>
-
-      <a href="#" class="work-card">
-        <div class="work-type">Project</div>
-        <div class="work-title">ERP Deployment</div>
-        <div class="work-desc">End-to-end Enterprise Resource Planning system setup for businesses.
-          Deployments covering CRM, inventory, HR, accounting, sales and more.</div>
-        <span class="work-arrow">VIEW →</span>
-      </a>
-
-      <a href="#" class="work-card">
-        <div class="work-type">Research</div>
-        <div class="work-title">Subconscious Alignment</div>
-        <div class="work-desc">Subconscial is an active research project that bridges AI technology and psychological
-          frameworks to help people understand, interpret, and align with their subconscious.</div>
-        <span class="work-arrow">LEARN MORE →</span>
-      </a>
-
-      <a href="#" class="work-card">
-        <div class="work-type">Project</div>
-        <div class="work-title">Resonance Agent</div>
-        <div class="work-desc">An AI-powered lead generation agent covering the full pipeline: from discovering
-          qualified prospects to enriching contact data and triggering targeted outreach.</div>
-        <span class="work-arrow">VIEW →</span>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="contact-left">
-      <div class="section-header" style="margin-bottom:1.5rem;">
-        <span class="section-num">03</span>
-        <h2 class="section-title">Contact</h2>
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-grid">
+        <div>
+          <p class="kicker">03 — Contact</p>
+          <h2 id="contact-title"><span class="mark">Let's build</span><br>something intelligent.</h2>
+          <p class="bio">Open to collaboration on AI systems, research, and software projects. Reach out to me on any of these platforms.</p>
+        </div>
+        <ul class="socials">
+          <li><a class="social" href="https://github.com/jjokah" target="_blank" rel="noopener noreferrer"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></span><span><span class="plat">GitHub</span><span class="handle">jjokah</span></span><span class="ext">↗<span class="sr"> (opens in a new tab)</span></span></a></li>
+          <li><a class="social" href="https://linkedin.com/in/jjokah" target="_blank" rel="noopener noreferrer"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span><span><span class="plat">LinkedIn</span><span class="handle">jjokah</span></span><span class="ext">↗<span class="sr"> (opens in a new tab)</span></span></a></li>
+          <li><a class="social" href="https://huggingface.co/jjokah" target="_blank" rel="noopener noreferrer"><span class="ico ico-text" aria-hidden="true">HF</span><span><span class="plat">Hugging Face</span><span class="handle">jjokah</span></span><span class="ext">↗<span class="sr"> (opens in a new tab)</span></span></a></li>
+          <li><a class="social" href="https://twitter.com/JohnJohnsonOkah" target="_blank" rel="noopener noreferrer"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span><span><span class="plat">X</span><span class="handle">@JohnJohnsonOkah</span></span><span class="ext">↗<span class="sr"> (opens in a new tab)</span></span></a></li>
+          <li><a class="social" href="mailto:johnjohnsonokah@gmail.com"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m4 7 8 6 8-6"/></svg></span><span><span class="plat">Email</span><span class="handle">johnjohnsonokah@gmail.com</span></span><span class="ext">↗</span></a></li>
+        </ul>
       </div>
-      <h2
-        style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin-bottom:1rem;color:var(--text);">
-        <em style="color:var(--red);font-style:normal;">Let's Build</em><br>Something<br>Intelligent.
-      </h2>
-      <p style="color:var(--text-dim);font-size:0.95rem;line-height:1.75;max-width:340px;">
-        Open to collaboration on AI systems, research, and software projects. Reach out to me on any of these platforms.
-      </p>
-    </div>
+    </section>
+  </main>
 
-    <div>
-      <div class="socials">
-
-        <a href="https://github.com/jjokah" target="_blank" class="social-link">
-          <div class="social-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color:var(--text-dim)">
-              <path
-                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
-            </svg>
-          </div>
-          <div class="social-info">
-            <div class="social-platform">GitHub</div>
-            <div class="social-name">jjokah</div>
-          </div>
-          <div class="social-ext">↗</div>
-        </a>
-
-        <a href="https://linkedin.com/in/jjokah" target="_blank" class="social-link">
-          <div class="social-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color:var(--text-dim)">
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-          </div>
-          <div class="social-info">
-            <div class="social-platform">LinkedIn</div>
-            <div class="social-name">jjokah</div>
-          </div>
-          <div class="social-ext">↗</div>
-        </a>
-
-        <a href="https://huggingface.co/jjokah" target="_blank" class="social-link">
-          <div class="social-icon" style="font-size:1.1rem;">🤗</div>
-          <div class="social-info">
-            <div class="social-platform">Hugging Face</div>
-            <div class="social-name">jjokah</div>
-          </div>
-          <div class="social-ext">↗</div>
-        </a>
-
-        <a href="https://twitter.com/JohnJohnsonOkah" target="_blank" class="social-link">
-          <div class="social-icon">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--text-dim)">
-              <path
-                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-            </svg>
-          </div>
-          <div class="social-info">
-            <div class="social-platform">X / Twitter</div>
-            <div class="social-name">@JohnJohnsonOkah</div>
-          </div>
-          <div class="social-ext">↗</div>
-        </a>
-
-        <a href="mailto:johnjohnsonokah@gmail.com" class="social-link">
-          <div class="social-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              style="color:var(--text-dim)">
-              <rect x="2" y="4" width="20" height="16" rx="2" />
-              <path d="m2 7 10 7 10-7" />
-            </svg>
-          </div>
-          <div class="social-info">
-            <div class="social-platform">Email</div>
-            <div class="social-name">johnjohnsonokah@gmail.com</div>
-          </div>
-          <div class="social-ext">↗</div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">JJ<span>OKAH</span></div>
-    <div class="footer-copy">© 2026 JohnJohnson Okah</div>
+    <a class="logo" href="#about">JJ<span>OKAH</span></a>
+    <p>© 2026 JohnJohnson Okah</p>
+
   </footer>
-
+  <script>
+    const links = [...document.querySelectorAll('nav .nav-links a[href^="#"]')];
+    const sections = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const link = links.find((a) => a.getAttribute('href') === '#' + entry.target.id);
+          if (!link) return;
+          links.forEach((l) => l.removeAttribute('aria-current'));
+          link.setAttribute('aria-current', 'true');
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      sections.forEach((s) => obs.observe(s));
+    }
+  </script>
 </body>
-
 </html>
